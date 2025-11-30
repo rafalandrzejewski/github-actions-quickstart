@@ -1,12 +1,14 @@
 name: .NET CI
 
 on:
+  # Sekcja 'push:' i 'pull_request:' muszą być na tym samym poziomie wcięcia
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
 jobs:
+  # Sekcja 'build:' musi być na tym samym poziomie wcięcia co 'on:' i 'name:'
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -14,7 +16,8 @@ jobs:
         # Możesz dostosować te wersje do swojego projektu .NET
         dotnet-version: ['6.0.x', '8.0.x'] 
 
-   steps:
+    steps:
+      # Lista kroków musi być poprawnie wcięta
     - uses: actions/checkout@v4
       
       # Krok 1: Konfiguracja SDK .NET
@@ -32,7 +35,7 @@ jobs:
       run: dotnet build ConsoleApp1/ConsoleApp1.sln --no-restore
       
       # Krok 4: Uruchomienie testów (jeśli dodasz testy w przyszłości)
-      # Jeśli masz projekty testowe w podkatalogu, to polecenie jest OK.
-      # Jeśli nie masz testów, usuń ten krok.
+      # Pamiętaj, że ten krok wymaga istnienia projektu testowego w rozwiązaniu!
+      # Jeśli projekt testowy jest w innym folderze lub nie istnieje, ten krok się nie powiedzie.
     - name: Test
       run: dotnet test --no-build --verbosity normal
