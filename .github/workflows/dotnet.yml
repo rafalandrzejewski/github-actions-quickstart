@@ -1,0 +1,35 @@
+name: .NET CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # Możesz dostosować te wersje do swojego projektu .NET
+        dotnet-version: ['6.0.x', '8.0.x'] 
+
+    steps:
+    - uses: actions/checkout@v4
+      # Krok 1: Konfiguracja SDK .NET
+    - name: Setup .NET ${{ matrix.dotnet-version }}
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ matrix.dotnet-version }}
+        
+      # Krok 2: Przywrócenie zależności (NuGet packages)
+    - name: Restore dependencies
+      run: dotnet restore
+      
+      # Krok 3: Budowanie projektu
+    - name: Build
+      run: dotnet build --no-restore
+      
+      # Krok 4: Uruchomienie testów jednostkowych
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
