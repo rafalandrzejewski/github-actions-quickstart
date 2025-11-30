@@ -26,16 +26,10 @@ jobs:
       with:
         dotnet-version: ${{ matrix.dotnet-version }}
         
-      # Krok 2: Przywrócenie zależności (wskazanie pliku rozwiązania!)
+      # Krok 2: Przywrócenie zależności (wskazujemy plik w głównym katalogu)
     - name: Restore dependencies
-      run: dotnet restore ConsoleApp1/ConsoleApp1.sln
+      run: dotnet restore ConsoleApp1.slnx
       
-      # Krok 3: Budowanie projektu (wskazanie pliku rozwiązania!)
+      # Krok 3: Budowanie projektu (wskazujemy plik w głównym katalogu)
     - name: Build
-      run: dotnet build ConsoleApp1/ConsoleApp1.sln --no-restore
-      
-      # Krok 4: Uruchomienie testów (jeśli dodasz testy w przyszłości)
-      # Pamiętaj, że ten krok wymaga istnienia projektu testowego w rozwiązaniu!
-      # Jeśli projekt testowy jest w innym folderze lub nie istnieje, ten krok się nie powiedzie.
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet build ConsoleApp1.slnx --no-restore
