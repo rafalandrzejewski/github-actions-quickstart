@@ -1,23 +1,20 @@
-name: .NET CI
+name: .NET CI - Build Only
 
 on:
-  # Sekcja 'push:' i 'pull_request:' muszą być na tym samym poziomie wcięcia
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
 jobs:
-  # Sekcja 'build:' musi być na tym samym poziomie wcięcia co 'on:' i 'name:'
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        # Możesz dostosować te wersje do swojego projektu .NET
-        dotnet-version: ['6.0.x', '8.0.x'] 
+        # Używamy wersji .NET, którą prawdopodobnie ma Twoja aplikacja konsolowa
+        dotnet-version: ['8.0.x'] 
 
     steps:
-      # Lista kroków musi być poprawnie wcięta
     - uses: actions/checkout@v4
       
       # Krok 1: Konfiguracja SDK .NET
@@ -26,10 +23,11 @@ jobs:
       with:
         dotnet-version: ${{ matrix.dotnet-version }}
         
-      # Krok 2: Przywrócenie zależności (wskazujemy plik w głównym katalogu)
+      # Krok 2: Przywrócenie zależności
     - name: Restore dependencies
-      run: dotnet restore ConsoleApp1\ConsoleApp1.slnx
+      # Używamy poprawnej nazwy pliku rozwiązania (.sln w katalogu głównym)
+      run: dotnet restore ConsoleApp1.slnx
       
-      # Krok 3: Budowanie projektu (wskazujemy plik w głównym katalogu)
+      # Krok 3: Budowanie projektu (Kompilacja)
     - name: Build
-      run: dotnet build ConsoleApp1\ConsoleApp1.slnx --no-restore
+      run: dotnet build ConsoleApp1.slnx --no-restore
