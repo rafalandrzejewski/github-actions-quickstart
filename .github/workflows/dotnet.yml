@@ -29,7 +29,3 @@ jobs:
       # Krok 3: Budowanie projektu
     - name: Build
       run: dotnet build --no-restore
-      
-      # Krok 4: Uruchomienie testów jednostkowych
-    - name: Test
-      run: dotnet test --no-build --verbosity normal

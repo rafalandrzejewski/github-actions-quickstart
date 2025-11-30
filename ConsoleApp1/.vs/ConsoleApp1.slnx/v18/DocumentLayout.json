@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Course C#\\github-actions-quickstart\\src\\github-actions-quickstart\\",
+  "WorkspaceRootPath": "C:\\Course C#\\github-actions-quickstart\\ConsoleApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BDF696E0-364F-4868-89EC-5A1DD45A135D}|github-actions-quickstart\\github-actions-quickstart.csproj|c:\\course c#\\github-actions-quickstart\\src\\github-actions-quickstart\\github-actions-quickstart\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BDF696E0-364F-4868-89EC-5A1DD45A135D}|github-actions-quickstart\\github-actions-quickstart.csproj|solutionrelative:github-actions-quickstart\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{729A08AC-AADB-4C27-BBC2-1F325F3E3C8F}|ConsoleApp1\\ConsoleApp1.csproj|c:\\course c#\\github-actions-quickstart\\consoleapp1\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{729A08AC-AADB-4C27-BBC2-1F325F3E3C8F}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,13 +48,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Course C#\\github-actions-quickstart\\src\\github-actions-quickstart\\github-actions-quickstart\\Program.cs",
-              "RelativeDocumentMoniker": "github-actions-quickstart\\Program.cs",
-              "ToolTip": "C:\\Course C#\\github-actions-quickstart\\src\\github-actions-quickstart\\github-actions-quickstart\\Program.cs",
-              "RelativeToolTip": "github-actions-quickstart\\Program.cs",
+              "DocumentMoniker": "C:\\Course C#\\github-actions-quickstart\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
+              "ToolTip": "C:\\Course C#\\github-actions-quickstart\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "RelativeToolTip": "ConsoleApp1\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T10:37:18.725Z",
+              "WhenOpened": "2025-11-30T10:41:37.308Z",
               "EditorCaption": ""
             }
           ]

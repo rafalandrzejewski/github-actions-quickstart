@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("github-actions-quickstart")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("ConsoleApp1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+556cce56be81099d6c95aca69657e8549196fc5e")]
-[assembly: System.Reflection.AssemblyProductAttribute("github-actions-quickstart")]
-[assembly: System.Reflection.AssemblyTitleAttribute("github-actions-quickstart")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02f844ab624c4c2fcbe2973e75ab63457f510598")]
+[assembly: System.Reflection.AssemblyProductAttribute("ConsoleApp1")]
+[assembly: System.Reflection.AssemblyTitleAttribute("ConsoleApp1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Wygenerowane przez klasę WriteCodeFragment programu MSBuild.
