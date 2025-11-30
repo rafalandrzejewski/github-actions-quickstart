@@ -28,8 +28,8 @@ jobs:
         
       # Krok 2: Przywrócenie zależności (wskazujemy plik w głównym katalogu)
     - name: Restore dependencies
-      run: dotnet restore ConsoleApp1.slnx
+      run: dotnet restore ConsoleApp1\ConsoleApp1.slnx
       
       # Krok 3: Budowanie projektu (wskazujemy plik w głównym katalogu)
     - name: Build
-      run: dotnet build ConsoleApp1.slnx --no-restore
+      run: dotnet build ConsoleApp1\ConsoleApp1.slnx --no-restore
